@@ -4,11 +4,9 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-var buff = new Buffer();
-buff.write(fs.readFileSync('index.html');
-buff.toString;
-
 app.get('/', function(request, response) {
+  var buff = new Buffer(fs.readFileSync('index.html');
+  buff.toString;
   response.send(buff);
 });
 
